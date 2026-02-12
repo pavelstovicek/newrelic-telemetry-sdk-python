@@ -278,6 +278,12 @@ class SpanClient(Client):
     PAYLOAD_TYPE = "spans"
 
 
+class SpanClientEU(SpanClient):
+    """SpanClient for the EU region"""
+
+    HOST = "trace-api.eu.newrelic.com"
+
+
 class MetricClient(Client):
     """HTTP Client for interacting with the New Relic Metric API
 
@@ -302,6 +308,12 @@ class MetricClient(Client):
     HOST = "metric-api.newrelic.com"
     PATH = "/metric/v1"
     PAYLOAD_TYPE = "metrics"
+
+
+class MetricClientEU(MetricClient):
+    """MetricClient for the EU region"""
+
+    HOST = "metric-api.eu.newrelic.com"
 
 
 class EventClient(Client):
@@ -348,6 +360,12 @@ class EventClient(Client):
         return super().send_batch(items, None, timeout=timeout)
 
 
+class EventClientEU(EventClient):
+    """EventClient for the EU region"""
+
+    HOST = "insights-collector.eu01.nr-data.net"
+
+
 class LogClient(Client):
     """HTTP Client for interacting with the New Relic Log API
 
@@ -371,3 +389,9 @@ class LogClient(Client):
     HOST = "log-api.newrelic.com"
     PATH = "/log/v1"
     PAYLOAD_TYPE = "logs"
+
+
+class LogClientEU(LogClient):
+    """LogClient for the EU region"""
+
+    HOST = "log-api.eu.newrelic.com"
