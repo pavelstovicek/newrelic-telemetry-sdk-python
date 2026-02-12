@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from newrelic_telemetry_sdk.batch import EventBatch, SpanBatch
-from newrelic_telemetry_sdk.client import EventClient, HTTPError, LogClient, MetricClient, SpanClient
+from newrelic_telemetry_sdk.client import EventClient, EventClientEU, HTTPError, LogClient, LogClientEU, MetricClient, MetricClientEU, SpanClient, SpanClientEU
 from newrelic_telemetry_sdk.event import Event
 from newrelic_telemetry_sdk.harvester import Harvester
 from newrelic_telemetry_sdk.log import Log, NewRelicLogFormatter
@@ -33,16 +33,20 @@ __all__ = (
     "Event",
     "EventBatch",
     "EventClient",
+    "EventClientEU",
     "GaugeMetric",
     "HTTPError",
     "Harvester",
     "Log",
     "LogClient",
+    "LogClientEU",
     "MetricBatch",
     "MetricClient",
+    "MetricClientEU",
     "NewRelicLogFormatter",
     "Span",
     "SpanBatch",
     "SpanClient",
+    "SpanClientEU",
     "SummaryMetric",
 )
